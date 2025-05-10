@@ -1,0 +1,337 @@
+/* Styles de base pour le bouton grabber */
+.grabber-button {
+    position: fixed !important;
+    z-index: 999999 !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #3B82F6 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: move !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    color: white !important;
+    font-size: 20px !important;
+    transform: translate3d(20px, 20px, 0);
+}
+
+.grabber-button i {
+    pointer-events: none !important;
+}
+
+/* Styles pour le formulaire */
+.grabber-form {
+    position: fixed !important;
+    background: white !important;
+    border: 1px solid #ccc !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+    min-width: 300px !important;
+}
+
+.grabber-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    pointer-events: auto !important;
+}
+
+.grabber-title {
+    font-weight: bold !important;
+    font-size: 1.2rem !important;
+    color: #000000 !important;
+    margin-bottom: 4px !important;
+}
+
+.grabber-subtitle {
+    color: #6b7280 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 12px !important;
+}
+
+.grabber-input {
+    width: 100% !important;
+    padding: 8px !important;
+    margin: 10px 0 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    pointer-events: auto !important;
+    z-index: 1000000 !important;
+}
+
+.grabber-search-btn {
+    width: 100% !important;
+    padding: 8px !important;
+    background: #3B82F6 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    z-index: 1000000 !important;
+}
+
+.grabber-search-btn:hover {
+    background-color: #3B82F6;
+}
+
+/* Loading steps */
+.loading-step {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    color: #6b7280;
+}
+
+.loading-icon {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Styles pour les loading steps */
+.loading-step {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0;
+    padding: 8px;
+    background: #f8fafc;
+    border-radius: 6px;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.step-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Result container */
+.result-container {
+    margin-top: 16px;
+    display: none;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 12px;
+    position: relative;
+}
+
+/* Styles pour le conteneur de résultat */
+.result-container {
+    display: none;
+    margin-top: 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.video-info {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.video-thumbnail {
+    flex-shrink: 0;
+    width: 120px;
+    height: 68px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-details {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.video-title {
+    font-weight: 500;
+    color: #1f2937;
+    font-size: 15px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px;
+    display: inline-block;
+}
+
+.channel-name {
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.status-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #10b981;
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+.download-btn {
+    width: 100%;
+    padding: 8px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.download-btn:hover {
+    background-color: #059669;
+}
+
+.download-btn {
+    width: 100%;
+    padding: 8px;
+    background: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.download-btn:hover {
+    background: #2563EB;
+}
+
+.download-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: transparent;
+    border: none;
+    color: #e3342f;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 4px;
+    line-height: 1;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: transparent;
+    border: none;
+    color: #dc2626;
+    font-size: 18px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.delete-btn:hover {
+    background: rgba(220, 38, 38, 0.1);
+}
+
+.minimize-btn {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    z-index: 1000000 !important;
+    padding: 8px 12px !important;
+    font-size: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.minimize-btn h3 {
+    margin: 0 !important;
+    font-size: 24px !important;
+}
+
+.minimize-btn:hover {
+    color: #4b5563 !important;
+}
+
+.drag-handle {
+    cursor: move !important;
+    padding: 4px 8px !important;
+    color: #6b7280 !important;
+    font-size: 18px !important;
+}
+
+/* Reset des styles par défaut */
+.grabber-form * {
+    box-sizing: border-box !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    pointer-events: auto !important;
+}
+
+/* Style pour les icônes */
+.fas {
+    display: inline-block !important;
+    font-style: normal !important;
+    font-variant: normal !important;
+    text-rendering: auto !important;
+    line-height: 1 !important;
+}
+
+#grabberButton {
+    display: none !important;
+}
+
+/* Ensure form is above other elements */
+#grabberForm {
+    position: fixed !important;
+    z-index: 999999 !important;
+}
